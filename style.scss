@@ -1,0 +1,156 @@
+@import "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+$whiteColor: #ffffff;
+$primaryColor: #3c3c3c;
+$secondaryColor: #cccccc;
+$fontLato: "Lato", sans-serif;
+
+@mixin buttons($alignment: center) {
+  background-color: transparent;
+  border: none;
+  margin-bottom: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: $alignment;
+  font-weight: 500;
+  font-size: 15px;
+  color: $primaryColor;
+}
+
+body {
+  background: #ccc;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  font-family: $fontLato;
+}
+
+.container {
+  width: 80%;
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.navBar {
+  width: 20%;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  background-color: $whiteColor;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.navBar__mode {
+  border: $primaryColor 1px solid;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.navBar__mode__active {
+  background-color: $primaryColor !important;
+  color: $whiteColor !important;
+  border: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px !important;
+  margin: 0;
+  padding: 0;
+}
+
+.navBar button {
+  @include buttons;
+}
+
+.navBar__logo {
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.navBar__logo img {
+  width: 70%;
+  height: auto;
+  text-align: center;
+}
+
+.navBar__menu__open {
+  display: flex;
+  flex-direction: column;
+}
+
+.navBar__menu__open button {
+  @include buttons(left);
+}
+
+.navBar__menu__open button:hover,
+.navBar__menu__close button:hover {
+  background-color: $secondaryColor;
+  font-weight: 700;
+}
+
+.navBar__menu__close {
+  display: flex;
+  flex-direction: column;
+}
+
+i {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.navBar__menu__profile {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.profile__image {
+  border-radius: 40%;
+  width: 40%;
+  max-width: 60px;
+  max-height: 60px;
+  height: auto;
+  margin-right: 15px;
+}
+
+.profile__image__close{
+  border-radius: 40%;
+  width: 100%;
+  max-width: 60px;
+  max-height: 60px;
+  height: auto;
+  margin-right: 15px;
+}
+
+.profile__info {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile__info h5 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.profile__info p {
+  font-size: 10px;
+}
+
+.homePage {
+  width: 80%;
+}
+
+.minWidth {
+  width: 5%;
+  height: 80%;
+  min-width: 50px;
+}
+.close {
+  display: none;
+}

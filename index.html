@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/897e8556e6.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navBar" id="navBar">
+        <button class="navBar__toggle" onclick="myToggle()"><i class="fa-solid fa-bars"></i></i></button>
+        <div class="navBar__mode" id="navBar__mode">
+            <button class="navBar__mode__active">PERSONAL</button>
+            <button class="navBar__mode_inactive">BUSINESS</button>
+        </div>
+        <div class="navBar__logo" id="navBar__logo"><img src="http://ones.flatheme.net/assets/images/client-1.png" alt=""></div>
+        <div class="navBar__menu__open " id="navBar__menu__open">
+          <button><i class="fa-solid fa-border-all"></i>Dashboard</button>
+          <button><i class="fa-solid fa-bag-shopping"></i>Products</button>
+          <button><i class="fa-solid fa-envelope-open-text"></i>Mail</button>
+          <button><i class="fa-solid fa-bolt"></i>Campaigns</button>
+          <button><i class="fa-solid fa-calendar-days"></i>Calendar</button>
+          <button><i class="fa-solid fa-address-book"></i>Contacts</button>
+          <hr />
+          <h6>ACCOUNT</h6>
+          <button><i class="fa-solid fa-bell"></i>Notifications</button>
+          <button><i class="fa-solid fa-message"></i>Chat</button>
+          <button><i class="fa-solid fa-gear"></i>Settings</button>
+          <div class="navBar__menu__profile">
+            <img class="profile__image" src="https://cuellar.dev/images/profile.png" alt="" />
+            <div class="profile__info">
+              <h5>Andres Cuellar</h5>
+              <p>afca133@gmail.com</p>
+            </div>
+          </div>
+        </div>    
+        <!-- Menu minimalista -->
+        <div class="navBar__menu__close close" id="navBar__menu__close">
+          <button><i class="fa-solid fa-border-all"></i></button>
+          <button><i class="fa-solid fa-bag-shopping"></i></button>
+          <button><i class="fa-solid fa-envelope-open-text"></i></button>
+          <button><i class="fa-solid fa-bolt"></i></button>
+          <button><i class="fa-solid fa-calendar-days"></i></button>
+          <button><i class="fa-solid fa-address-book"></i></button>
+          <hr />
+          <h6>ACCOUNT</h6>
+          <button><i class="fa-solid fa-bell"></i></button>
+          <button><i class="fa-solid fa-message"></i></button>
+          <button><i class="fa-solid fa-gear"></i></button>
+          <div class="navBar__menu__profile">
+            <img class="profile__image__close" src="https://cuellar.dev/images/profile.png" alt="" />          
+          </div>
+        </div>     
+      </div>
+      <div class="homePage"></div>
+    </div>
+
+    <script>
+      function myToggle() {
+         let navBar = document.getElementById("navBar");
+         let navBar__menu__open = document.getElementById("navBar__menu__open");
+         let navBar__menu__close = document.getElementById("navBar__menu__close");
+         let navBar__logo = document.getElementById("navBar__logo");
+         let navBar__mode = document.getElementById("navBar__mode");  
+
+         navBar.classList.toggle("minWidth") ;
+         navBar__menu__open.classList.toggle("close");
+         navBar__menu__close.classList.toggle("close");
+         navBar__logo.classList.toggle("close");
+         navBar__mode.classList.toggle("close");
+      }
+      </script>
+  </body>
+</html>
